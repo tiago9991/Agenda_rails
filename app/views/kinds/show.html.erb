@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div class = "basic-grey">
+<h1><%= render @kind %></h1>
+  <%= link_to "Edit this kind", edit_kind_path(@kind), class: "button" %> 
+
+  <br><br>
+
+  <%= button_to "Destroy this kind", @kind, method: :delete, class: "button" %>
+</div>

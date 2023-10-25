@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div class= "basic-grey" id="kinds">
+<h1>Listandos os Tipos</h1>
+  <% @kinds.each do |kind| %>
+    <%= render kind %>
+    <p>
+      <%= link_to "Show this kind", kind, class: "button" %>
+      <br><br>
+    </p>
+  <% end %>
+  <%= link_to "New kind", new_kind_path, class: "button" %>
+</div>
+
+
+
+
+

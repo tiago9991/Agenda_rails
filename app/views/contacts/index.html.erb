@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div class = "basic-grey" id="contacts">
+<h1>Contacts</h1>
+  <% @contacts.each do |contact| %>
+    <%= render contact %>
+    <p>
+      <%= link_to "Show this contact", contact, class: "button" %>
+      <br><br>
+    </p>
+  <% end %>
+  <%= link_to "New contact", new_contact_path, class: "button"%>
+</div>
+
+
+
+<% abc = "ABC" %>
+
+<%= render partial: "/contacts/shared/teste", locals: {yxz: abc} %>

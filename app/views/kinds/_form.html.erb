@@ -1,0 +1,25 @@
+<%= form_with(model: kind, html: { class: "basic-grey"}) do |form| %>
+  <% if kind.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(kind.errors.count, "error") %> prohibited this kind from being saved:</h2>
+
+      <ul>
+        <% kind.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h1> description </h1>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.submit "Enviar", class: "button" %>
+    <%= link_to "Back to kinds", kinds_path, class: "button" %>
+  </div>
+<% end %>

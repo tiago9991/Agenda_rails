@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div class = "basic-grey" id="phones">
+<h1>Phones</h1>
+  <% @phones.each do |phone| %>
+    <%= render phone %>
+    <p>
+      <%= link_to "Show this phone", phone, class: "button"  %>
+      <br>
+      <br>
+    </p>
+  <% end %>
+  <%= link_to "New phone", new_phone_path, class: "button"  %>
+</div>
+
+

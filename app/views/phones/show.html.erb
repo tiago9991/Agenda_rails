@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div class = "basic-grey">
+<h1>Contacts</h1>
+<%= render @phone %>
+  <%= link_to "Edit this phone", edit_phone_path(@phone), class: "button"  %> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= link_to "Back to phones", phones_path, class: "button"  %>
+
+  <br>
+  <br>
+
+  <%= button_to "Destroy this phone", @phone, method: :delete, class: "button"  %>
+</div>
